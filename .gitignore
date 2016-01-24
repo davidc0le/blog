@@ -1,1 +1,3 @@
 flaskr.db
+*.pyc
+__pycache__
