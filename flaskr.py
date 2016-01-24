@@ -34,7 +34,6 @@ app.config.from_envvar('FLASKR_SETTINGS', silent=True)
 def connect_db():
     """Connects to the specific database."""
     rv = sqlite3.connect(app.config['DATABASE'])
-    raise Exception("errrrrr")
     rv.row_factory = sqlite3.Row
     return rv
 
@@ -93,6 +92,7 @@ def add_entry():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
+    raise Exception("errrrrr")
     if request.method == 'POST':
         if request.form['username'] != app.config['USERNAME']:
             error = 'Invalid username'
